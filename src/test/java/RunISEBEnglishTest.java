@@ -15,11 +15,11 @@ import net.masterthought.cucumber.ReportBuilder;
 
 @CucumberOptions(
         features = "src/test/resources/features",
-        glue ={"com.automation.steps","com.automation.hooks"},
+        glue ={"com.automation.steps"},
         plugin = {"pretty", "json:target/jsonreports/cucumber.json"
                 , "junit:target/junit_reports/cucumberjunit.xml"},
         strict = true,
-        tags = {"not @ignore", "not @wip"}
+        tags = {"@web"}
 )
 public class RunISEBEnglishTest extends AbstractTestNGCucumberTests {
     @DataProvider(parallel = true)
